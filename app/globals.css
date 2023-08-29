@@ -17,11 +17,71 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
 }
+
+.main-container {
+  @apply w-[calc(100vw-320px)]  h-full flex absolute right-0   mt-12  flex-col items-center;
+}
+
+.topbar {
+  @apply fixed top-0 z-30 flex w-full items-center justify-between  px-8 py-3 bg-black;
+}
+
+/* tailwind.css */
+
+/* Sidebar */
+.sidebar {
+  @apply bg-white w-72 p-6 transition-all h-full border-r mt-6 fixed;
+}
+
+/* User Info */
+.user-info {
+  @apply flex justify-center items-center;
+}
+
+.icon {
+  @apply text-lg flex justify-center items-center;
+}
+
+.info-name {
+  @apply text-xl font-semibold text-black capitalize;
+}
+
+.info-img {
+  @apply w-12 h-12 overflow-hidden rounded-full shadow-md;
+}
+
+/* Navigation */
+.navigation {
+  @apply mt-5 py-4 px-4 lg:mt-9 lg:px-6;
+}
+
+/* Navigation Links */
+.nav-item {
+  @apply mb-4 mr-1;
+}
+
+.nav-link {
+  @apply flex h-10 rounded-lg  items-center  px-3 transition border-transparent;
+}
+
+.nav-link:hover {
+  @apply border;
+}
+
+.nav-link.active {
+  @apply bg-slate-500 shadow-md;
+}
+
+.nav-link-icon {
+  @apply w-6 h-6 text-black;
+}
+
+.nav-link-text {
+  @apply capitalize text-black;
+}
+
+
+
+/* Responsive Styles */
+/* Add your responsive styles here */
